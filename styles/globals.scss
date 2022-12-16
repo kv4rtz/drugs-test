@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0b0b0b;
+  font-family: 'Mulish', sans-serif;
+  @apply text-gray-100;
+}
+
+#__next {
+  @apply flex flex-col h-screen;
+}
+
+main {
+  @apply flex-auto
+}

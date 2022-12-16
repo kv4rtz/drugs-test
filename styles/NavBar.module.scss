@@ -1,0 +1,43 @@
+.header {
+  @apply py-5;
+  svg {
+    @apply mr-3;
+    fill: #3b82f6;
+  }
+  &-logo {
+    @apply flex items-center;
+  }
+  &-wrap {
+    @apply flex justify-between items-center;
+  }
+}
+
+.nav {
+  &-list {
+    @apply flex
+  }
+  &-item {
+    @apply mr-10 relative hover:text-blue-500 transition-all;
+    &:before {
+      content: '';
+      @apply bg-blue-500 absolute transition-all;
+      width: 0;
+      height: 1px;
+      left: -10%;
+      bottom: -7px;
+      box-shadow: 0 0 15px #3b82f6;
+    }
+    &:hover:before {
+      width: 120%;
+    }
+    &.active.nav-item:before {
+      width: 120%;
+    }
+    &.active {
+      @apply text-blue-500;
+    }
+    &:last-child {
+      @apply m-0;
+    }
+  }
+}
